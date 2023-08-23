@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Web3 from "web3";
-import SimpleCounter from "../../Smart_Contracts/build/contracts/SimpleCounter.json";
+import SimpleCounter from "./contracts/SimpleCounter.json";
+import "./App.scss";
 
 function App() {
   const [web3, setWeb3] = useState(null);
@@ -68,10 +69,10 @@ function App() {
   return (
     <div className="App">
       <div className="Data">
-        <div className="Count">Count:{count}</div>
+        <div className="Count">Count: {count}</div>
         <div className="Buttons">
-          <button onClick={handleIncrement}>Increment</button>
-          <button onClick={handleDecrement}>Decrement</button>
+          <button onClick={handleIncrement} >Increment</button>
+          <button onClick={handleDecrement} >Decrement</button>
         </div>
       </div>
     </div>
